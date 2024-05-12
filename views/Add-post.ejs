@@ -1,0 +1,47 @@
+<%- include("partials/header.ejs") %>
+
+<div
+  class="container"
+  data-bs-target="#navbar-top"
+  data-bs-spy="scroll"
+  tabindex="0"
+>
+  <section
+    class="mb-9 mb-lg-10 mb-xxl-11 text-center text-lg-start mt-9"
+
+  >
+    <div>
+      <form action="/add-post" method="post">
+        <div class=" mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Title"
+            name="title"
+          />
+          <label for="floatingInput">Add Title</label>
+        </div>
+
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+            style="height: 100px"
+            name="postBody"
+          ></textarea>
+          <label for="floatingTextarea2">What do you think ?</label>
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-success" type="submit">Add Post</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+<button class="btn scroll-to-top" data-scroll-top="data-scroll-top">
+  <span class="uil uil-angle-up text-white"></span>
+</button>
+
+<%- include("partials/footer.ejs") %> >

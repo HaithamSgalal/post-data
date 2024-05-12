@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+
+<div
+  class="container"
+  data-bs-target="#navbar-top"
+  data-bs-spy="scroll"
+  tabindex="0"
+>
+  <section
+    class="mb-9 mb-lg-10 mb-xxl-11 text-center text-lg-start mt-9"
+    id="home"
+  >
+    <div>
+      <% if(AllPosts) { %> 
+      <% AllPosts.forEach( (AllPosts) => {%>
+      <h5><%= AllPosts.title %></h5>
+      <p><%= AllPosts.postBody %></p>
+      <% }) %> 
+      <% } else { %>
+
+      <h1>You haven't Post anything!</h1>
+
+      <% } %>
+    </div>
+  </section>
+</div>
+<button class="btn scroll-to-top" data-scroll-top="data-scroll-top">
+  <span class="uil uil-angle-up text-white"></span>
+</button>
+
+<%- include("partials/footer.ejs") %> >
